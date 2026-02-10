@@ -106,12 +106,25 @@
         </div>
     </nav>
     <!-- Mobile Menu -->
-<div id="mobileMenu" class="hidden bg-primary text-white md:hidden">
-  <button onclick="scrollToSection('home')" class="block w-full text-left px-6 py-3 hover:bg-secondary">Home</button>
-  <button onclick="scrollToSection('menu')" class="block w-full text-left px-6 py-3 hover:bg-secondary">Menu</button>
-  <button onclick="scrollToSection('about')" class="block w-full text-left px-6 py-3 hover:bg-secondary">About</button>
-  <button onclick="scrollToSection('contact')" class="block w-full text-left px-6 py-3 hover:bg-secondary">Contact</button>
+<!-- Mobile Menu -->
+<div
+  id="mobileMenu"
+  class="hidden fixed top-[64px] left-0 w-full bg-primary text-white md:hidden z-40"
+>
+  <button onclick="scrollToSection('home'); toggleMobileMenu()" class="block w-full text-left px-6 py-3 hover:bg-secondary">
+    Home
+  </button>
+  <button onclick="scrollToSection('menu'); toggleMobileMenu()" class="block w-full text-left px-6 py-3 hover:bg-secondary">
+    Menu
+  </button>
+  <button onclick="scrollToSection('about'); toggleMobileMenu()" class="block w-full text-left px-6 py-3 hover:bg-secondary">
+    About
+  </button>
+  <button onclick="scrollToSection('contact'); toggleMobileMenu()" class="block w-full text-left px-6 py-3 hover:bg-secondary">
+    Contact
+  </button>
 </div>
+
 
     <!-- Hero Section -->
     <section id="home" class="hero-section h-96 md:h-screen flex items-center justify-center text-center">
