@@ -100,11 +100,18 @@
                 <button onclick="scrollToSection('contact')" class="text-white hover:text-accent transition duration-300 font-medium">Contact</button>
             </div>
             
-            <button class="md:hidden text-white">
+           <button class="md:hidden text-white" onclick="toggleMobileMenu()">
                 <i class="fas fa-bars text-xl"></i>
             </button>
         </div>
     </nav>
+    <!-- Mobile Menu -->
+<div id="mobileMenu" class="hidden bg-primary text-white md:hidden">
+  <button onclick="scrollToSection('home')" class="block w-full text-left px-6 py-3 hover:bg-secondary">Home</button>
+  <button onclick="scrollToSection('menu')" class="block w-full text-left px-6 py-3 hover:bg-secondary">Menu</button>
+  <button onclick="scrollToSection('about')" class="block w-full text-left px-6 py-3 hover:bg-secondary">About</button>
+  <button onclick="scrollToSection('contact')" class="block w-full text-left px-6 py-3 hover:bg-secondary">Contact</button>
+</div>
 
     <!-- Hero Section -->
     <section id="home" class="hero-section h-96 md:h-screen flex items-center justify-center text-center">
@@ -407,7 +414,7 @@
                             </div>
                             
                             <div>
-                                <select class="w-full p-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:border-accent text-white">
+                                <select class="w-full p-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:border-accent text-black">
                                     <option value="">Number of Guests</option>
                                     <option value="1">1 Person</option>
                                     <option value="2">2 People</option>
@@ -521,10 +528,10 @@
         });
 
         // Mobile menu toggle functionality
-        document.querySelector('.md:hidden').addEventListener('click', function() {
-            // In a real implementation, this would toggle the mobile menu
-            console.log('Mobile menu toggle clicked');
-        });
+       function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('hidden');
+}
 
         // Add scroll event listener for header effect
         window.addEventListener('scroll', function() {
